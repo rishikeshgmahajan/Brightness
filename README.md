@@ -30,11 +30,7 @@ Since Brightness is still under development and not yet published as apackage, y
    ```bash
    cd BrightnessMD
    ```
-6. **Intall Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-7. **Run**
+6. **Run**
    
    Run `Brightness_Editor.py`
 
