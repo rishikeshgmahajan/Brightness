@@ -1,7 +1,6 @@
 from PySide6.QtWidgets import QMessageBox
 import os
 import pandas as pd
-import tabulate
 import re
 from urllib.parse import quote
 import sys
