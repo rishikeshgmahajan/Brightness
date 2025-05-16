@@ -22,7 +22,7 @@ Since Brightness is still under development and not yet published as apackage, y
 
 3. **Fork** this repository by clicking the Fork button at the top right of this page
 
-4. **Clone** your fork to your locat system using the command:
+4. **Clone** your fork to your local system using the command:
    ```git
    git clone https://github.com/rishikeshgmahajan/BrightnessMD.git
    ```
