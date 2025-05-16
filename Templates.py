@@ -37,7 +37,7 @@ class TemplateDialog(QDialog):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.setWindowTitle("Templates")
-        self.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\templates.png"))
+        self.setWindowIcon(QtGui.QIcon("ME_Icons/templates.png"))
         self.setFixedSize(600, 600)
 
         # Set the background color of the dialog to light grey
@@ -65,7 +65,7 @@ class TemplateDialog(QDialog):
         
         # Create the search button with an icon
         self.search_button = QPushButton(self)
-        self.search_button.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\search.png"))  # Replace with your icon path
+        self.search_button.setIcon(QtGui.QIcon("ME_Icons/search.png"))  # Replace with your icon path
         self.search_button.setStyleSheet("""
             QPushButton{
                                    border-radius:5px;
@@ -648,7 +648,7 @@ QPushButton:hover{
 QLineEdit:focus {
                              border:2px solid royalblue;}
         """)
-        error_dialog.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\templates.png"))
+        error_dialog.setWindowIcon(QtGui.QIcon("ME_Icons/templates.png"))
 
     def get_template_content(self, template_name):
         """Retrieve the template content for the selected template."""

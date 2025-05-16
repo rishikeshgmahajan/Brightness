@@ -36,7 +36,7 @@ class BadgeDialog(QDialog):
             dialog = ShieldsLicenseDialog(self)
             dialog.exec()
 
-        self.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\badge.png"))
+        self.setWindowIcon(QtGui.QIcon("ME_Icons/badge.png"))
         self.setWindowTitle("Custom Badges")
         self.setGeometry(100, 100, 580, 600)
         self.setStyleSheet("""
@@ -174,7 +174,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button1.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\standardB.png"))
+        button1.setIcon(QtGui.QIcon("ME_Icons/standardB.png"))
         button1.setIconSize(button_size)  # Set icon size to button size
         button1.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; border-radius: 5px; line-height: 1; margin-bottom: 10px;">
@@ -193,7 +193,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button2.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\shadB.png"))
+        button2.setIcon(QtGui.QIcon("ME_Icons/shadB.png"))
         button2.setIconSize(button_size)  # Set icon size to button size
         button2.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; border-radius: 5px; line-height: 1; margin-bottom: 10px;">
@@ -212,7 +212,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button3.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\breakB.png"))
+        button3.setIcon(QtGui.QIcon("ME_Icons/breakB.png"))
         button3.setIconSize(button_size)  # Set icon size to button size
         button3.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; border-radius: 5px; line-height: 1; margin-bottom: 10px;">
@@ -231,7 +231,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button4.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\alertB.png"))
+        button4.setIcon(QtGui.QIcon("ME_Icons/alertB.png"))
         button4.setIconSize(button_size)  # Set icon size to button size
         button4.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; line-height: 1; margin-bottom: 10px;">
@@ -250,7 +250,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button5.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\gradB.png"))
+        button5.setIcon(QtGui.QIcon("ME_Icons/gradB.png"))
         button5.setIconSize(button_size)  # Set icon size to button size
         button5.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; border-radius: 5px; line-height: 1; margin-bottom: 10px;">
@@ -269,7 +269,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button6.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\rouncorB.png"))
+        button6.setIcon(QtGui.QIcon("ME_Icons/rouncorB.png"))
         button6.setIconSize(button_size)  # Set icon size to button size
         button6.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; border-radius: 15px; line-height: 1; margin-bottom: 10px;">
@@ -288,7 +288,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button7.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\outlB.png"))
+        button7.setIcon(QtGui.QIcon("ME_Icons/outlB.png"))
         button7.setIconSize(button_size)  # Set icon size to button size
         button7.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; line-height: 1; margin-bottom: 10px; border: 2px solid #4CAF50;">
@@ -307,7 +307,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button8.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\sharpgradB.png"))
+        button8.setIcon(QtGui.QIcon("ME_Icons/sharpgradB.png"))
         button8.setIconSize(button_size)  # Set icon size to button size
         button8.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; line-height: 1; margin-bottom: 10px;">
@@ -326,7 +326,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button9.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\sharshadB.png"))
+        button9.setIcon(QtGui.QIcon("ME_Icons/sharshadB.png"))
         button9.setIconSize(button_size)  # Set icon size to button size
         button9.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; line-height: 1; margin-bottom: 10px;">
@@ -345,7 +345,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button10.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\stripB.png"))
+        button10.setIcon(QtGui.QIcon("ME_Icons/stripB.png"))
         button10.setIconSize(button_size)  # Set icon size to button size
         button10.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; line-height: 1; margin-bottom: 10px;">
@@ -364,7 +364,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button11.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\wiborB.png"))
+        button11.setIcon(QtGui.QIcon("ME_Icons/wiborB.png"))
         button11.setIconSize(button_size)  # Set icon size to button size
         button11.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; line-height: 1; margin-bottom: 10px; border: 2px solid #333;">
@@ -383,7 +383,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button12.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\dottedB.png"))
+        button12.setIcon(QtGui.QIcon("ME_Icons/dottedB.png"))
         button12.setIconSize(button_size)  # Set icon size to button size
         button12.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; line-height: 1; margin-bottom: 10px; border: 2px dotted #2196F3;">
@@ -402,7 +402,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button13.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\noradB.png"))
+        button13.setIcon(QtGui.QIcon("ME_Icons/noradB.png"))
         button13.setIconSize(button_size)  # Set icon size to button size
         button13.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; line-height: 1; margin-bottom: 10px;">
@@ -420,7 +420,7 @@ border-radius:7px;
             border-radius: 8px;
             margin: 5px;
         """)
-        button14.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\primhov.png"))
+        button14.setIcon(QtGui.QIcon("ME_Icons/primhov.png"))
         button14.setIconSize(button_size)  # Set icon size to button size
         button14.clicked.connect(lambda: self.parent.text_edit.textCursor().insertText("""
 \n<div style="display: inline-flex; align-items: center; justify-content: center; border-radius: 20px; padding: 10px 15px; margin: 5px; font-size: 14px; color: white; background: linear-gradient(45deg, #6200ea, #3700b3); cursor: pointer;" 
@@ -658,7 +658,7 @@ background:white;
                                       border-radius:5px;
 font-size:15px;
 """)
-        copy_button = QPushButton(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\copy_tag_link.png"),"")
+        copy_button = QPushButton(QtGui.QIcon("ME_Icons/copy_tag_link.png"),"")
         copy_button.setFixedSize(30, 35)
         copy_button.setIconSize(QtCore.QSize(20, 20))
         copy_button.setStyleSheet("""
@@ -687,7 +687,7 @@ QPushButton:hover{
         form_layout.addRow("Link (Optional):", link_input)
 
         # Buttons
-        create_badge_button = QPushButton(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\tag_create.png"),"")
+        create_badge_button = QPushButton(QtGui.QIcon("ME_Icons/tag_create.png"),"")
         create_badge_button.setIconSize(QtCore.QSize(40, 40))
         create_badge_button.setStyleSheet("""
 QPushButton{
@@ -701,7 +701,7 @@ QPushButton:hover{
                              color:royalblue;
                              border:1px solid royalblue;}
 """)
-        add_badge_button = QPushButton(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\tag_add.png"),"")
+        add_badge_button = QPushButton(QtGui.QIcon("ME_Icons/tag_add.png"),"")
         add_badge_button.setIconSize(QtCore.QSize(40, 40))
         add_badge_button.setStyleSheet("""
 QPushButton{

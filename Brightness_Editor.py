@@ -31,8 +31,8 @@ from PySide6.QtWidgets import QWidget, QSizePolicy
 from PySide6.QtCore import Qt, QTimer
 import mistune
 
-#"C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\"
-#"C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\"
+#"ME_Icons/"
+#"ME_Icons/"
 
 SETTINGS_FILE = "menu_state.json"
 REM_RIBBON = "remribbon.json"
@@ -208,7 +208,7 @@ class BrightnessEditor(QMainWindow):
         
     def initUI(self):
         self.setWindowTitle('Brightness')
-        self.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\MEico.png"))
+        self.setWindowIcon(QtGui.QIcon("ME_Icons/MEico.png"))
         self.setStyleSheet("""
 
 background:white;
@@ -220,7 +220,7 @@ background:white;
         self.main_layout = QVBoxLayout(widget)
 
         self.icon_label = QLabel()
-        self.icon_pixmap = QPixmap("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\MEico.png")
+        self.icon_pixmap = QPixmap("ME_Icons/MEico.png")
         self.icon_label.setPixmap(self.icon_pixmap.scaled(30, 30, Qt.KeepAspectRatio, Qt.SmoothTransformation))
         self.icon_label.setStyleSheet("""
 margin-right:10px;
@@ -359,7 +359,7 @@ font-size:14px;
 
         header_layout.addWidget(self.file_label)
 
-        self.toggle_mode_button = QPushButton(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\togglemode.png"), '', self)
+        self.toggle_mode_button = QPushButton(QtGui.QIcon("ME_Icons/togglemode.png"), '', self)
         self.toggle_mode_button.setToolTip("Toggle live preview between light and dark mode")  # Set tooltip
         self.toggle_mode_button.setShortcut("Ctrl+D")  # Set shortcut (optional for QPushButton)
         self.toggle_mode_button.setIconSize(QSize(25, 25))
@@ -629,7 +629,7 @@ margin-top:5px;
         """)
         self.status_bar.addPermanentWidget(self.md_selection)
 
-        self.present_markdown_preview_button = QPushButton(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\present.png"),"")
+        self.present_markdown_preview_button = QPushButton(QtGui.QIcon("ME_Icons/present.png"),"")
         self.present_markdown_preview_button.setShortcut("F5")
         self.present_markdown_preview_button.setToolTip("Present Markdown")
         self.present_markdown_preview_button.setStatusTip("Present Markdown")
@@ -805,7 +805,7 @@ border-radius:5px;
         
         html_preview_tab_layout = QVBoxLayout()
 
-        self.save_button = QPushButton(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\save.png"), '')
+        self.save_button = QPushButton(QtGui.QIcon("ME_Icons/save.png"), '')
         self.save_button.clicked.connect(self.save_html_preview)
         self.save_button.setIconSize(QSize(25, 25))
         self.save_button.setStyleSheet("""
@@ -816,7 +816,7 @@ border-radius:5px;
                                          background:#e5e5e5;
                                          }
         """)
-        self.copy_html_button = QPushButton(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\copy.png"), '')
+        self.copy_html_button = QPushButton(QtGui.QIcon("ME_Icons/copy.png"), '')
         self.copy_html_button.clicked.connect(lambda: QApplication.clipboard().setText(self.html_edit.toPlainText()))
         self.copy_html_button.setIconSize(QSize(25, 25))
         self.copy_html_button.setStyleSheet("""
@@ -928,7 +928,7 @@ QScrollBar:vertical {
         right_widget = QWidget()
         self.right_layout = QHBoxLayout(right_widget)
 
-        self.run_command = QPushButton(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\runcmd.png"), "")
+        self.run_command = QPushButton(QtGui.QIcon("ME_Icons/runcmd.png"), "")
         self.run_command.setFixedSize(35,35)
         self.run_command.setShortcut(QtGui.QKeySequence("Return"))
         self.run_command.clicked.connect(self.run_command_function)
@@ -962,13 +962,13 @@ border-color: qlineargradient(spread:reflect, x1:0.203, y1:0, x2:1, y2:0, stop:0
         self.file_toolbar.setFixedHeight(40)
         self.file_toolbar.setMovable(False)   
         
-        self.toggle_treeview_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\filedd.png"),"File Tree", self)
+        self.toggle_treeview_action = QAction(QtGui.QIcon("ME_Icons/filedd.png"),"File Tree", self)
         self.toggle_treeview_action.triggered.connect(self.toggle_tree_view)
         self.toggle_treeview_action.setToolTip("File tree")
         self.toggle_treeview_action.setCheckable(True)
         #self.file_toolbar.addAction(self.toggle_treeview_action)
 
-        self.open_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\open.png"),"Open", self)
+        self.open_action = QAction(QtGui.QIcon("ME_Icons/open.png"),"Open", self)
         self.open_action.triggered.connect(self.open_file)
         self.open_action.setToolTip("Open a document")  # Set tooltip
         self.open_action.setShortcut("Ctrl+O")  # Set shortcut
@@ -976,34 +976,34 @@ border-color: qlineargradient(spread:reflect, x1:0.203, y1:0, x2:1, y2:0, stop:0
 
         self.file_toolbar.addSeparator()
         
-        self.save_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\save.png"),"Save", self)
+        self.save_action = QAction(QtGui.QIcon("ME_Icons/save.png"),"Save", self)
         self.save_action.triggered.connect(self.save_file)
         self.save_action.setToolTip("Save the current document")  # Set tooltip
         self.save_action.setShortcut("Ctrl+S")  # Set shortcut
         self.file_toolbar.addAction(self.save_action)
 
-        self.save_as_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\saveas.png"),"Save As", self)
+        self.save_as_action = QAction(QtGui.QIcon("ME_Icons/saveas.png"),"Save As", self)
         self.save_as_action.triggered.connect(self.save_file_as)
         self.save_as_action.setToolTip("Save the current document with new name")  # Set tooltip
         self.save_as_action.setShortcut("Ctrl+Shift+S")  # Set shortcut
         self.file_toolbar.addAction(self.save_as_action)
 
         self.save_pdf_action = QAction("Save Preview As PDF", self)
-        self.save_pdf_action.setIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\prepdf.png"))  # Optional icon
+        self.save_pdf_action.setIcon(QtGui.QIcon("ME_Icons/prepdf.png"))  # Optional icon
         self.save_pdf_action.setToolTip("Save the preview as pdf")
         self.save_pdf_action.triggered.connect(self.save_as_pdf)
         self.file_toolbar.addAction(self.save_pdf_action)
 
         self.file_toolbar.addSeparator()
 
-        self.new_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\newwin.png"),"New Window", self)
+        self.new_action = QAction(QtGui.QIcon("ME_Icons/newwin.png"),"New Window", self)
         self.new_action.triggered.connect(self.new)
         self.new_action.setToolTip("New window")
         self.file_toolbar.addAction(self.new_action)
 
         self.file_toolbar.addSeparator()
 
-        self.template_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\templates.png"),"Templates", self)
+        self.template_action = QAction(QtGui.QIcon("ME_Icons/templates.png"),"Templates", self)
         self.template_action.triggered.connect(self.open_template_dialog)
         self.template_action.setToolTip("Templates")
         self.template_action.setStatusTip("Templates")
@@ -1011,24 +1011,24 @@ border-color: qlineargradient(spread:reflect, x1:0.203, y1:0, x2:1, y2:0, stop:0
 
         self.file_toolbar.addSeparator()
 
-        self.close_save_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\saveclose.png"), "Close File", self)
+        self.close_save_action = QAction(QtGui.QIcon("ME_Icons/saveclose.png"), "Close File", self)
         self.close_save_action.triggered.connect(self.save_and_close)
         self.close_save_action.setToolTip("Close and save file")
         self.file_toolbar.addAction(self.close_save_action)
 
-        self.close_window = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\closewindow.png"),"Close Window",self)
+        self.close_window = QAction(QtGui.QIcon("ME_Icons/closewindow.png"),"Close Window",self)
         self.close_window.triggered.connect(self.close)
         self.close_window.setToolTip("Close window")
         self.file_toolbar.addAction(self.close_window)
 
-        self.toggle_command_line_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\cmdline.png"),"Toggle command line", self)
+        self.toggle_command_line_action = QAction(QtGui.QIcon("ME_Icons/cmdline.png"),"Toggle command line", self)
         self.toggle_command_line_action.triggered.connect(self.toggle_command_line)
         self.toggle_command_line_action.setToolTip("Toggle command line")
         self.toggle_command_line_action.setStatusTip("Toggle command line")
         self.toggle_command_line_action.setShortcut("Ctrl+/")
         #self.file_toolbar.addAction(self.toggle_command_line_action)
 
-        self.toggle_mode_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\togglemode.png"),'Toggle Mode', self)
+        self.toggle_mode_action = QAction(QtGui.QIcon("ME_Icons/togglemode.png"),'Toggle Mode', self)
         self.toggle_mode_action.triggered.connect(self.toggle_mode)
         self.toggle_mode_action.setToolTip("Toggle live preview between light and dark mode")  # Set tooltip
         self.toggle_mode_action.setShortcut("Ctrl+D")
@@ -1071,13 +1071,13 @@ border-color: qlineargradient(spread:reflect, x1:0.203, y1:0, x2:1, y2:0, stop:0
         self.edit_toolbar.layout().setSpacing(5)  # Sets spacing between items
         self.edit_toolbar.layout().setContentsMargins(5, 5, 5, 5)
 
-        self.undo_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\undo.png"), "Undo", self)
+        self.undo_action = QAction(QIcon("ME_Icons/undo.png"), "Undo", self)
         self.undo_action.setShortcut("Ctrl+Z")  # Set shortcut
         self.undo_action.setToolTip("Undo the last action")
         self.undo_action.triggered.connect(lambda: self.text_edit.undo())
         
         # Add 'Redo' action
-        self.redo_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\redo.png"), "Redo", self)
+        self.redo_action = QAction(QIcon("ME_Icons/redo.png"), "Redo", self)
         self.redo_action.setShortcut("Ctrl+Y")  # Set shortcut
         self.redo_action.setToolTip("Redo the last undone action")
         self.redo_action.triggered.connect(lambda: self.text_edit.redo())
@@ -1087,31 +1087,31 @@ border-color: qlineargradient(spread:reflect, x1:0.203, y1:0, x2:1, y2:0, stop:0
 
         self.edit_toolbar.addSeparator()
 
-        self.cut_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\cut.png"),'Cut', self)
+        self.cut_action = QAction(QtGui.QIcon("ME_Icons/cut.png"),'Cut', self)
         self.cut_action.setShortcut('Ctrl+X')
         self.cut_action.setToolTip("Cut the text from the editor")
         self.cut_action.triggered.connect(self.text_edit.cut)
         self.edit_toolbar.addAction(self.cut_action)
 
-        self.copy_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\copy.png"),'Copy', self)
+        self.copy_action = QAction(QtGui.QIcon("ME_Icons/copy.png"),'Copy', self)
         self.copy_action.setShortcut('Ctrl+C')
         self.copy_action.setToolTip("Copy the text from the editor")
         self.copy_action.triggered.connect(self.text_edit.copy)
         self.edit_toolbar.addAction(self.copy_action)
 
-        self.paste_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\paste.png"),'Paste', self)
+        self.paste_action = QAction(QtGui.QIcon("ME_Icons/paste.png"),'Paste', self)
         self.paste_action.setShortcut('Ctrl+V')
         self.paste_action.setToolTip("Paste the text from clipboard") # Set shortcut
         self.paste_action.triggered.connect(self.text_edit.paste)
         self.edit_toolbar.addAction(self.paste_action)
 
-        self.selectall_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\selectall.png"), "Select All", self)
+        self.selectall_action = QAction(QIcon("ME_Icons/selectall.png"), "Select All", self)
         self.selectall_action.setShortcut("Ctrl+Y")  # Set shortcut
         self.selectall_action.setToolTip("Select all text in the editor")
         self.selectall_action.triggered.connect(self.text_edit.selectAll)
         self.edit_toolbar.addAction(self.selectall_action)
 
-        self.clear_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\clear.png"), "Clear", self)
+        self.clear_action = QAction(QIcon("ME_Icons/clear.png"), "Clear", self)
         self.clear_action.setShortcut("Ctrl+Y")  # Set shortcut
         self.clear_action.setToolTip("Clear all text from the editor")
         self.clear_action.triggered.connect(self.text_edit.clear)
@@ -1119,28 +1119,28 @@ border-color: qlineargradient(spread:reflect, x1:0.203, y1:0, x2:1, y2:0, stop:0
 
         self.edit_toolbar.addSeparator()
 
-        self.find_replace_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\findandreplace.png"),"Find and Replace", self)
+        self.find_replace_action = QAction(QtGui.QIcon("ME_Icons/findandreplace.png"),"Find and Replace", self)
         self.find_replace_action.triggered.connect(self.show_find_replace_dialog)
         self.edit_toolbar.addAction(self.find_replace_action)
 
         self.edit_toolbar.addSeparator()
 
-        self.indent_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\indent.png"),"Indent", self)
+        self.indent_action = QAction(QtGui.QIcon("ME_Icons/indent.png"),"Indent", self)
         self.indent_action.triggered.connect(self.indent_text)
         self.edit_toolbar.addAction(self.indent_action)
 
-        self.dedent_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\dedent.png"),"Dedent", self)
+        self.dedent_action = QAction(QtGui.QIcon("ME_Icons/dedent.png"),"Dedent", self)
         self.dedent_action.triggered.connect(self.dedent_text)
         self.edit_toolbar.addAction(self.dedent_action)
 
         self.edit_toolbar.addSeparator()
 
-        self.comment_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\comment.png"),"Comment", self)
+        self.comment_action = QAction(QtGui.QIcon("ME_Icons/comment.png"),"Comment", self)
         self.comment_action.triggered.connect(self.insert_comment)
         self.comment_action.setToolTip("Comment selected text")
         self.edit_toolbar.addAction(self.comment_action)
 
-        self.uncomment_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\uncomment.png"),"Uncomment", self)
+        self.uncomment_action = QAction(QtGui.QIcon("ME_Icons/uncomment.png"),"Uncomment", self)
         self.uncomment_action.triggered.connect(self.remove_comment)
         self.uncomment_action.setToolTip("Uncomment selected text")
         self.edit_toolbar.addAction(self.uncomment_action)
@@ -1233,7 +1233,7 @@ margin-top:5px;
 
         self.tool_button = QToolButton(self)
         self.tool_button.setText("Date & Time")
-        self.tool_button.setIcon(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\datetime.png"))
+        self.tool_button.setIcon(QIcon("ME_Icons/datetime.png"))
         # Create a dropdown menu
         menu = QMenu(self)
 
@@ -1292,22 +1292,22 @@ margin-top:5px;
 """)
         self.insert_toolbar.addWidget(self.tool_button)
 
-        self.link_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\link.png"),"Add Link", self)
+        self.link_action = QAction(QtGui.QIcon("ME_Icons/link.png"),"Add Link", self)
         self.link_action.triggered.connect(self.show_link_dialog)
         self.link_action.setToolTip("Add a link")
         self.insert_toolbar.addAction(self.link_action)
 
-        self.image_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\image.png"),"Insert Image", self)
+        self.image_action = QAction(QtGui.QIcon("ME_Icons/image.png"),"Insert Image", self)
         self.image_action.triggered.connect(self.show_image_dialog)
         self.image_action.setToolTip("Add an image")
         self.insert_toolbar.addAction(self.image_action)
 
-        self.table_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\table.png"),"Table", self)
+        self.table_action = QAction(QtGui.QIcon("ME_Icons/table.png"),"Table", self)
         self.table_action.triggered.connect(self.insert_table_dialog)
         self.table_action.setToolTip("Insert a table")
         self.insert_toolbar.addAction(self.table_action)
 
-        self.add_equation_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\equation.png"),"Equations", self)
+        self.add_equation_action = QAction(QtGui.QIcon("ME_Icons/equation.png"),"Equations", self)
         self.add_equation_action.triggered.connect(self.eq_win)
         self.add_equation_action.setToolTip("Add an equation")  # Set tooltip
         self.insert_toolbar.addAction(self.add_equation_action)
@@ -1381,32 +1381,32 @@ margin-top:5px;
         self.admonition_combobox.setCurrentIndex(0)
         self.insert_toolbar.addWidget(self.admonition_combobox)
 
-        self.section_header_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\sectionheader.png"),"Section Header", self)
+        self.section_header_action = QAction(QtGui.QIcon("ME_Icons/sectionheader.png"),"Section Header", self)
         self.section_header_action.triggered.connect(self.show_section_header_dialog)
         self.section_header_action.setToolTip("Add a section header")
         self.insert_toolbar.addAction(self.section_header_action)
 
-        self.toc_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\instoc.png"), 'Insert Table of Contents', self)
+        self.toc_action = QAction(QtGui.QIcon("ME_Icons/instoc.png"), 'Insert Table of Contents', self)
         self.toc_action.triggered.connect(self.insert_toc)
         self.toc_action.setToolTip("Insert Table of Contents")
         self.insert_toolbar.addAction(self.toc_action)
 
-        self.prog_bar_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\progbar.png"), 'Insert Progressbar', self)
+        self.prog_bar_action = QAction(QtGui.QIcon("ME_Icons/progbar.png"), 'Insert Progressbar', self)
         self.prog_bar_action.triggered.connect(self.open_progress_bar_dialog)
         self.prog_bar_action.setToolTip("Insert Progress Bar")
         self.insert_toolbar.addAction(self.prog_bar_action)
 
-        self.custom_badge_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\badge.png"), 'Insert Custom Badge', self)
+        self.custom_badge_action = QAction(QtGui.QIcon("ME_Icons/badge.png"), 'Insert Custom Badge', self)
         self.custom_badge_action.triggered.connect(self.custom_badge_dialog)
         self.custom_badge_action.setToolTip("Insert Custom Badge")
         self.insert_toolbar.addAction(self.custom_badge_action)
 
-        self.hr_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\horzline.png"),"Horizontal Line", self)
+        self.hr_action = QAction(QtGui.QIcon("ME_Icons/horzline.png"),"Horizontal Line", self)
         self.hr_action.triggered.connect(self.insert_horizontal_line)
         self.hr_action.setToolTip("Add a horizontal line")
         self.insert_toolbar.addAction(self.hr_action)
 
-        self.footnote_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\footnote.png"),"Footnote", self)
+        self.footnote_action = QAction(QtGui.QIcon("ME_Icons/footnote.png"),"Footnote", self)
         self.footnote_action.triggered.connect(self.insert_footnote)
         self.footnote_action.setToolTip("Add a footnote")
         self.insert_toolbar.addAction(self.footnote_action)
@@ -1474,35 +1474,35 @@ margin-top:5px;
     }
 """)
 
-        self.bold_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\bold.png"),"Bold", self)
+        self.bold_action = QAction(QtGui.QIcon("ME_Icons/bold.png"),"Bold", self)
         self.bold_action.triggered.connect(self.make_bold)
         self.bold_action.setToolTip("Bold the text")  # Set tooltip
         self.bold_action.setShortcut("Ctrl+B")  # Set shortcut
         
-        self.italic_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\itallic.png"),"Italic", self)
+        self.italic_action = QAction(QtGui.QIcon("ME_Icons/itallic.png"),"Italic", self)
         self.italic_action.triggered.connect(self.make_italic)
         self.italic_action.setToolTip("Italic the text")  # Set tooltip
         self.italic_action.setShortcut("Ctrl+I")  # Set shortcut
         
-        self.bold_italic_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\bolditallic.png"),"Bold Italic", self)
+        self.bold_italic_action = QAction(QtGui.QIcon("ME_Icons/bolditallic.png"),"Bold Italic", self)
         self.bold_italic_action.triggered.connect(self.make_bold_italic)
         self.bold_italic_action.setToolTip("Bold and italic the text")  # Set tooltip
         self.bold_italic_action.setShortcut("Ctrl+Shift+B")  # Set shortcut
         
-        self.strikethrough_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\strickout.png"),"Strikethrough", self)
+        self.strikethrough_action = QAction(QtGui.QIcon("ME_Icons/strickout.png"),"Strikethrough", self)
         self.strikethrough_action.triggered.connect(self.make_strikethrough)
         self.strikethrough_action.setToolTip("Strickout the text")  # Set tooltip
         self.strikethrough_action.setShortcut("Ctrl+Alt+S")  # Set shortcut
 
-        self.highlight_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\highlight.png"),"Highlight", self)
+        self.highlight_action = QAction(QtGui.QIcon("ME_Icons/highlight.png"),"Highlight", self)
         self.highlight_action.triggered.connect(self.highlight_text)
         self.highlight_action.setToolTip("Highlight selected text")
 
-        self.subscript_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\subscript.png"),"Subscript", self)
+        self.subscript_action = QAction(QtGui.QIcon("ME_Icons/subscript.png"),"Subscript", self)
         self.subscript_action.triggered.connect(self.make_subscript)
         self.subscript_action.setToolTip("Subscript selected text")
 
-        self.superscript_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\superscript.png"),"Superscript", self)
+        self.superscript_action = QAction(QtGui.QIcon("ME_Icons/superscript.png"),"Superscript", self)
         self.superscript_action.triggered.connect(self.make_superscript)
         self.superscript_action.setToolTip("Superscript selected text")
 
@@ -1514,7 +1514,7 @@ margin-top:5px;
         self.format_toolbar.addAction(self.subscript_action)
         self.format_toolbar.addAction(self.superscript_action)
 
-        line_break_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\linebreak.png"),"Insert Line Break", self)
+        line_break_action = QAction(QtGui.QIcon("ME_Icons/linebreak.png"),"Insert Line Break", self)
         line_break_action.triggered.connect(lambda: self.text_edit.insertPlainText("<br>"))
         self.format_toolbar.addAction(line_break_action)
 
@@ -1711,7 +1711,7 @@ margin-top:5px;
         
         self.format_toolbar.addSeparator()
 
-        self.clear_formatting_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\clearformat.png"),"Clear Formatting", self)
+        self.clear_formatting_action = QAction(QtGui.QIcon("ME_Icons/clearformat.png"),"Clear Formatting", self)
         self.format_toolbar.addAction(self.clear_formatting_action)
         self.clear_formatting_action.triggered.connect(self.clear_formatting)
 
@@ -1763,7 +1763,7 @@ margin-top:5px;
         self.view_toolbar.layout().setContentsMargins(5, 5, 5, 5)
 
         # Existing Actions
-        self.toggle_ribbon = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\ribbon.png"), '', self)
+        self.toggle_ribbon = QAction(QtGui.QIcon("ME_Icons/ribbon.png"), '', self)
         self.toggle_ribbon.setCheckable(True)
         self.toggle_ribbon.setChecked(self.load_ribbon_settings())
         self.toggle_ribbon.triggered.connect(self.toggle_ribbon_function)
@@ -1776,36 +1776,36 @@ margin-top:5px;
         if saved_state:  
             self.toggle_ribbon_function(True)
 
-        self.editor_view_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\editview.png"), '', self)
+        self.editor_view_action = QAction(QtGui.QIcon("ME_Icons/editview.png"), '', self)
         self.editor_view_action.setCheckable(True)
         self.editor_view_action.setChecked(False)
         self.editor_view_action.triggered.connect(self.enable_editor_view)
 
-        self.preview_view_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\fullpreview.png"), '', self)
+        self.preview_view_action = QAction(QtGui.QIcon("ME_Icons/fullpreview.png"), '', self)
         self.preview_view_action.setCheckable(True)
         self.preview_view_action.setChecked(False)
         self.preview_view_action.triggered.connect(self.enable_preview_view)
 
-        self.splitter_orient = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\switchor.png"), '', self)
+        self.splitter_orient = QAction(QtGui.QIcon("ME_Icons/switchor.png"), '', self)
         self.splitter_orient.setCheckable(True)
         self.splitter_orient.toggled.connect(self.save_view_checks_settings)
         self.splitter_orient.setChecked(False)
         self.splitter_orient.triggered.connect(self.splitter_or_func)
 
-        self.hide_file_label = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\hidefilepath.png"), '', self)
+        self.hide_file_label = QAction(QtGui.QIcon("ME_Icons/hidefilepath.png"), '', self)
         self.hide_file_label.setCheckable(True)
         self.hide_file_label.toggled.connect(self.save_view_checks_settings)
         self.hide_file_label.setChecked(False)
         self.hide_file_label.triggered.connect(self.hide_file_label_func)
 
-        self.clean_mode = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\cleanview.png"), '', self)
+        self.clean_mode = QAction(QtGui.QIcon("ME_Icons/cleanview.png"), '', self)
         self.clean_mode.setCheckable(True)
         self.hide_file_label.toggled.connect(self.save_view_checks_settings)
         self.clean_mode.setChecked(False)
         self.clean_mode.triggered.connect(self.enable_clean_view)
 
         # Full Screen Action
-        self.fullscreen_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\fullscreen.png"), '', self)
+        self.fullscreen_action = QAction(QtGui.QIcon("ME_Icons/fullscreen.png"), '', self)
         self.fullscreen_action.setCheckable(True)  # Make it toggleable
         self.fullscreen_action.toggled.connect(self.save_view_checks_settings)
         self.fullscreen_action.setChecked(False)   # Initially not checked (normal window)
@@ -1871,7 +1871,7 @@ margin-top:5px;
 
         self.activity_toolbar.addAction(self.toggle_treeview_action)
 
-        self.toggle_outline_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\toc.png"),"", self)
+        self.toggle_outline_action = QAction(QtGui.QIcon("ME_Icons/toc.png"),"", self)
         self.toggle_outline_action.setCheckable(True)
         self.toggle_outline_action.triggered.connect(self.toggle_outline)
         self.activity_toolbar.addAction(self.toggle_outline_action)  
@@ -2402,7 +2402,7 @@ QCheckBox::indicator:checked {
         menu.addAction(open_location_action)
 
         # Close and Save File
-        save_and_close_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\closeandsavefile.png"),"Close and Save File", self)
+        save_and_close_action = QAction(QtGui.QIcon("ME_Icons/closeandsavefile.png"),"Close and Save File", self)
         save_and_close_action.triggered.connect(self.save_and_close)
         menu.addAction(save_and_close_action)
 
@@ -2864,11 +2864,11 @@ QTextEdit:focus {
         insert_menu = context_menu.addMenu("Insert")
 
         # Add submenus under insert
-        self.link_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\link.png"),"Link", self)
+        self.link_action = QAction(QtGui.QIcon("ME_Icons/link.png"),"Link", self)
         self.link_action.triggered.connect(self.show_link_dialog)
         self.link_action.setToolTip("Add a link")
         insert_menu.addAction(self.link_action)
-        self.image_action = QAction(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\image.png"),"Image", self)
+        self.image_action = QAction(QtGui.QIcon("ME_Icons/image.png"),"Image", self)
         self.image_action.triggered.connect(self.show_image_dialog)
         self.image_action.setToolTip("Add an image")
         insert_menu.addAction(self.image_action)
@@ -4692,7 +4692,7 @@ font-size:14px;
     def eq_win(self):
         self.eqwin = QDialog(self)
         self.eqwin.setWindowTitle("Equations")
-        self.eqwin.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\equation.png"))
+        self.eqwin.setWindowIcon(QtGui.QIcon("ME_Icons/equation.png"))
         self.eqwin.setGeometry(100, 100, 680, 290)
         self.eqwin.setStyleSheet("""background:#f2f2f2;""")
 
@@ -4928,7 +4928,7 @@ background:white;
 
     def show_link_dialog(self):
         dialog = QDialog(self)
-        dialog.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\link.png"))
+        dialog.setWindowIcon(QtGui.QIcon("ME_Icons/link.png"))
         dialog.setWindowTitle("Add Link")
         dialog.setStyleSheet("""
 QDialog {
@@ -5016,7 +5016,7 @@ QPushButton:hover{
     def show_image_dialog(self):
         dialog = QDialog(self)
         dialog.setWindowTitle("Insert Image")
-        dialog.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\image.png"))
+        dialog.setWindowIcon(QtGui.QIcon("ME_Icons/image.png"))
         dialog.setStyleSheet("""
 QDialog {
                              background:#f2f2f2;
@@ -5085,7 +5085,7 @@ QPushButton:hover{
 
     def open_progress_bar_dialog(self):
         dialog = QDialog(self)
-        dialog.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\progbar.png"))
+        dialog.setWindowIcon(QtGui.QIcon("ME_Icons/progbar.png"))
         dialog.setWindowTitle("Insert Progress Bar")
         dialog.setStyleSheet("""
         QDialog {
@@ -5218,7 +5218,7 @@ QPushButton:hover{
     def show_section_header_dialog(self):
         dialog = QDialog(self)
         dialog.setGeometry(600, 300, 700, 500)
-        dialog.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\sectionheader.png"))
+        dialog.setWindowIcon(QtGui.QIcon("ME_Icons/sectionheader.png"))
         dialog.setWindowTitle("Add Header")
         dialog.setStyleSheet("""
 QDialog {

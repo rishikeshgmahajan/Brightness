@@ -33,7 +33,7 @@ class Date_And_Time(QDialog):
         super().__init__(parent)
         self.parent = parent
 
-        self.setWindowIcon(QtGui.QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\datetime.png"))
+        self.setWindowIcon(QtGui.QIcon("ME_Icons/datetime.png"))
         self.setWindowTitle("Customize Date and Time")
         self.setFixedSize(700, 280)  # Fixed height changed from 350 to 280
         self.setWindowFlag(QtCore.Qt.WindowContextHelpButtonHint, False)

@@ -28,7 +28,7 @@ class InsertTableDialog(QDialog):
 
         self.setWindowTitle("Insert Table")
         self.setStyleSheet("background:#f2f2f2;")
-        self.setWindowIcon(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\table.png"))
+        self.setWindowIcon(QIcon("ME_Icons/table.png"))
         self.setGeometry(600, 300, 700, 500)
 
         # Main layout for the dialog
@@ -121,12 +121,12 @@ class InsertTableDialog(QDialog):
         layout.addWidget(self.table_widget)
 
         # Toolbar actions for table modifications
-        self.add_row_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\addrow.png"), "Add Row", self)
-        self.add_column_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\addcol.png"), "Add Column", self)
-        self.delete_row_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\delrow.png"), "Delete Row", self)
-        self.delete_column_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\delcol.png"), "Delete Column", self)
-        self.clear_table_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\deltab.png"), "Clear Table", self)
-        self.clear_table_contents_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\delcont.png"), "Clear Table Contents", self)
+        self.add_row_action = QAction(QIcon("ME_Icons/addrow.png"), "Add Row", self)
+        self.add_column_action = QAction(QIcon("ME_Icons/addcol.png"), "Add Column", self)
+        self.delete_row_action = QAction(QIcon("ME_Icons/delrow.png"), "Delete Row", self)
+        self.delete_column_action = QAction(QIcon("ME_Icons/delcol.png"), "Delete Column", self)
+        self.clear_table_action = QAction(QIcon("ME_Icons/deltab.png"), "Clear Table", self)
+        self.clear_table_contents_action = QAction(QIcon("ME_Icons/delcont.png"), "Clear Table Contents", self)
 
         # Connecting actions
         self.add_row_action.triggered.connect(self.add_row)
@@ -136,7 +136,7 @@ class InsertTableDialog(QDialog):
         self.clear_table_action.triggered.connect(self.clear_table)
         self.clear_table_contents_action.triggered.connect(self.clear_table_contents)
 
-        self.open_table_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\opentable.png"), "Open External Table", self)
+        self.open_table_action = QAction(QIcon("ME_Icons/opentable.png"), "Open External Table", self)
         self.open_table_action.triggered.connect(self.load_file)
         toolbar.addAction(self.open_table_action)
 
@@ -149,7 +149,7 @@ class InsertTableDialog(QDialog):
         toolbar.addAction(self.clear_table_contents_action)
 
         # Add header editing action to the toolbar
-        self.edit_headers_action = QAction(QIcon("C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\edithead.png"), "Edit Headers", self)
+        self.edit_headers_action = QAction(QIcon("ME_Icons/edithead.png"), "Edit Headers", self)
         self.edit_headers_action.triggered.connect(self.edit_headers)
         toolbar.addAction(self.edit_headers_action)
 

@@ -38,7 +38,7 @@ class FileMenuDialog(QDialog):
         self.setGeometry(200, 200, 400, 300)
         self.parent = parent
         
-        icon_path = "C:\\Users\\rishi_7b5nghb\\Desktop\\Brightness_Files\\ME_Icons\\"
+        icon_path = "ME_Icons/"
 
         # Main Layout
         main_layout = QVBoxLayout(self)
