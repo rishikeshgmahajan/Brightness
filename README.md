@@ -13,24 +13,24 @@
 Since Brightness is still under development and not yet published as apackage, you can fork the repository  into your local machine and try or test.
 <h3>Steps to run locally:</h3>
 
-1. Install **Requirements**
+1. **Fork** this repository by clicking the Fork button at the top right of this page
+
+2. **Clone** your fork to your local system using the command:
+   ```git
+   git clone https://github.com/rishikeshgmahajan/BrightnessMD.git
+   ```
+3. **Navigate** into the project folder:
+   ```bash
+   cd BrightnessMD
+   ```
+4. Install **Requirements**
    
    use `requirements.txt`
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Fork** this repository by clicking the Fork button at the top right of this page
-
-4. **Clone** your fork to your local system using the command:
-   ```git
-   git clone https://github.com/rishikeshgmahajan/BrightnessMD.git
-   ```
-5. **Navigate** into the project folder:
-   ```bash
-   cd BrightnessMD
-   ```
-6. **Run**
+5. **Run**
    
    Run `Brightness_Editor.py`
 
