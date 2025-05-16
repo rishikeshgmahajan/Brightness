@@ -29,7 +29,6 @@ from pygments.formatters import HtmlFormatter
 from PySide6.QtWidgets import QStyleFactory
 from PySide6.QtWidgets import QWidget, QSizePolicy
 from PySide6.QtCore import Qt, QTimer
-import mistune
 
 #"ME_Icons/"
 #"ME_Icons/"
