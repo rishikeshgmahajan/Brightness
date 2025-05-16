@@ -5,6 +5,8 @@
 
 <p align='center'><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />         <img src="https://img.shields.io/badge/JSON-F5DE19?style=flat-square&logo=json&logoColor=black" /></p>
 
+<h2 align='center'>Preview</h2>
+
 <p align='center'><img src="https://github.com/user-attachments/assets/6cb9157a-991d-419e-8cf9-e8fd5c520f0a" /></p>
 
 <h2 align='center'>Installation</h2>
