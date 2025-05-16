@@ -4588,7 +4588,7 @@ font-size:14px;
     
     def convert_sub(self,text):
         # Subscript: ~text~
-        text = re.sub(r'~([^~]+?)~', r'<sub>\1</sub>', text)
+        text = re.sub(r'(?<!~)~([^~]+?)~(?!~)', r'<sub>\1</sub>', text)
         return text
     
     def highlight_text_with_equal(self, text):
