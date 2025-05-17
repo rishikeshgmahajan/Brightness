@@ -253,6 +253,7 @@ margin-right:10px;
         self.button_group.addButton(self.insert_button)
         self.button_group.addButton(self.format_button)
         self.button_group.addButton(self.view_button)
+        self.button_group.addButton(self.help_button)
 
         # Connect buttons to function
         self.file_button.clicked.connect(lambda: self.toggle_toolbar(self.file_toolbar, self.file_button))
@@ -260,6 +261,7 @@ margin-right:10px;
         self.insert_button.clicked.connect(lambda: self.toggle_toolbar(self.insert_toolbar, self.insert_button))
         self.format_button.clicked.connect(lambda: self.toggle_toolbar(self.format_toolbar, self.format_button))
         self.view_button.clicked.connect(lambda: self.toggle_toolbar(self.view_toolbar, self.view_button))
+        self.help_button.clicked.connect(lambda: self.toggle_toolbar(self.help_toolbar, self.help_button))
 
         # Add buttons to main_tabs_layout
         self.main_tabs_layout.addWidget(self.icon_label)
@@ -1854,11 +1856,51 @@ margin-top:5px;
     }
 """)
 
+        self.help_toolbar = QToolBar("Help Toolbar")
+        self.help_toolbar.setFixedHeight(40)
+        self.help_toolbar.setMovable(False)
+        self.help_toolbar.layout().setSpacing(5)  # Sets spacing between items
+        self.help_toolbar.layout().setContentsMargins(5, 5, 5, 5)
+
+        # Actions
+
+        # Add actions to the "Help" menu
+
+        self.help_toolbar.setStyleSheet("""
+    QToolBar {
+        background-color: #fafafa;
+                                        margin-top:0px;
+                                        margin-left:0px;
+                                        margin-right:0px;
+                                        margin-bottom:0px;
+                                        padding:0px;
+                                        border-radius: 8px;
+                                        border:1px solid rgb(234, 234, 234);
+    }
+    
+    QToolButton {
+        background-color: #fafafa;
+        border: none;
+        padding: 1px;
+        margin:2px;
+                                        border-radius:8px;
+    }
+
+    QToolButton:hover {
+        background-color: #dbdcde;
+    }
+    QToolButton:checked {
+        background-color: #dbdcde;
+    }
+""")
+
+
         self.addToolBar(Qt.TopToolBarArea,self.format_toolbar)
         self.addToolBar(Qt.TopToolBarArea,self.file_toolbar)
         self.addToolBar(Qt.TopToolBarArea,self.edit_toolbar)
         self.addToolBar(Qt.TopToolBarArea,self.insert_toolbar)
         self.addToolBar(Qt.TopToolBarArea,self.view_toolbar)
+        self.addToolBar(Qt.TopToolBarArea,self.help_toolbar)
 
         middle_layout = QHBoxLayout()
 
@@ -1916,12 +1958,14 @@ margin-top:5px;
         self.edit_toolbar.show()
         self.insert_toolbar.hide()
         self.view_toolbar.hide()
+        self.help_toolbar.hide()
         
         self.top_layout.addWidget(self.file_toolbar)
         self.top_layout.addWidget(self.format_toolbar)
         self.top_layout.addWidget(self.edit_toolbar)
         self.top_layout.addWidget(self.insert_toolbar)
         self.top_layout.addWidget(self.view_toolbar)
+        self.top_layout.addWidget(self.help_toolbar)
 
         self.outline_frame = QFrame(self)
         self.outline_frame.setStyleSheet("""
@@ -2274,6 +2318,7 @@ QCheckBox::indicator:checked {
         self.insert_toolbar.hide()
         self.format_toolbar.hide()
         self.view_toolbar.hide()
+        self.help_toolbar.hide()
 
         # Show only the selected toolbar
         toolbar.show()
@@ -3808,7 +3853,16 @@ document.addEventListener('DOMContentLoaded', function() {{
             <head>
             <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       
+        <script>
+            MathJax = {{
+                tex: {{
+                    inlineMath: [['$', '$'], ['\\(', '\\)']]
+                }},
+                svg: {{ fontCache: 'global' }}
+            }};
+        </script>
+        <script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script type="module">
             import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
             mermaid.initialize({{ startOnLoad: true }});
         </script>
@@ -3856,20 +3910,24 @@ document.addEventListener('DOMContentLoaded', function() {{
                 text-decoration: none;
             }}
             pre {{
-                background-color: #E9E9E9;
-                padding: 10px;
-                overflow-x: auto;
-                border-radius: 5px;
-                font-wight: bold;
-            }}
-            pre code {{
-                font-weight: bold; /* Make text bold */
-            }}
-            code {{
-                background-color: #E9E9E9;
-                padding: 2px 4px;
-                border-radius: 3px;
-            }}
+    background-color: #E9E9E9;
+    padding: 10px;
+    overflow-x: auto;
+    border-radius: 5px;
+    border: 1px solid #b5b5b5;
+    /* Removed font-weight to not affect inner text */
+}}
+pre code {{
+    font-weight: normal; /* Neutralize if needed */
+    border: none; /* No extra border here */
+}}
+code {{
+    background-color: #E9E9E9; /* Match pre background if needed */
+    padding: 2px 4px;
+    border-radius: 5px;
+    border: 1px solid #b5b5b5;
+    font-weight: normal; /* Prevent bold text */
+}}
             mark {{
                 background-color: #f9ff0f;
                 border-radius: 7px;
@@ -3979,25 +4037,44 @@ document.addEventListener('DOMContentLoaded', function() {{
         console.error("Mermaid.js failed to load.");
     }}
 }});
-</script>
-<!-- MathJax Configuration -->
-<script type="text/javascript">
-window.MathJax = {{
-  tex: {{
-    inlineMath: [['$', '$'], ['\\\\(', '\\\\)']],
-    packages: {{ '[+]': ['noerrors'] }}
-  }},
-  options: {{
-    ignoreHtmlClass: 'tex2jax_ignore',
-    processHtmlClass: 'tex2jax_process'
-  }}
-}};
-</script>
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.0/es5/tex-mml-chtml.js"></script>
+<script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+    <!-- MathJax Configuration -->
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({{
+            tex2jax: {{
+                inlineMath: [['$','$'], ['\\(','\\)']],
+                displayMath: [['$$','$$'], ['\\[','\\]']],
+                processEscapes: true
+            }},
+            "HTML-CSS": {{
+                linebreaks: {{ automatic: true }},
+                scale: 90
+            }},
+            SVG: {{
+                font: "TeX"
+            }},
+            MathML: {{
+                extensions: ["mml3.js"]
+            }},
+            showMathMenu: false,  // Optional: Hide MathJax context menu
+            menuSettings: {{
+                zoom: "Click"  // Enable zoom on click for formulas
+            }}
+        }});
+    </script>
+    <script type="text/javascript">
+        // Ensure MathJax processes the page after content is loaded
+        window.onload = function() {{
+            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+        }};
+        </script>
             </head>
             <body>{html}</body>
             </html>
             """
+
             dialog = QDialog()
             dialog.setWindowTitle("Present")
             dialog.resize(800, 600)
