@@ -1,4 +1,4 @@
-
+# <p align='center'>Brightness</p>
 <p align='center'><img src="https://github.com/user-attachments/assets/daf3924c-facd-43a9-ab86-6636f637347e" /></p>
 
 <h2 align='center'>Preview</h2>
@@ -57,6 +57,14 @@ Since Brightness is still under development and not yet published as a package, 
    ```bash
    Brightness_Editor.py
    ```
+
+## <p align='center'>Community</p>
+
+- **Want to contribute?**
+  
+  We welcome contributions! Please see our [Contributing Guidelines](CONTRIBUTING.md) to get started.
+
+   
 <h2 align='center'>🛡️ Copyright and License</h2>
 
 © 2025 Rishikesh Mahajan
