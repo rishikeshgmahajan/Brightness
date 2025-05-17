@@ -14,7 +14,7 @@ from PySide6 import QtCore
 from PySide6.QtGui import QFontMetrics, QTextCharFormat, QFont
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWebEngineCore import QWebEnginePage, QWebEngineProfile
-from PySide6.QtGui import QContextMenuEven
+from PySide6.QtGui import QContextMenuEvent
 from markdown2 import Markdown
 from pygments import highlight
 from pygments.formatters import HtmlFormatter
