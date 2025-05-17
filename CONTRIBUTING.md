@@ -1,3 +1,5 @@
+[![Home](https://img.shields.io/badge/<Home-grey?style=flat)](https://github.com/rishikeshgmahajan/BrightnessMD.git)
+
 # <p align="center">Contributing to Brightness Markdown Editor</p>
 
 Thank you for your interest in contributing to Brightness Markdown Editor! Your help makes this project better for everyone. This guide will walk you through how to contribute effectively.
