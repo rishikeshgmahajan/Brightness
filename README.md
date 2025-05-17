@@ -1,16 +1,37 @@
 
 <p align='center'><img src="https://github.com/user-attachments/assets/6348622a-71a5-4203-9b18-860f8980647c" /></p>
 
-<hr>
-
-<p align='center'><img src="https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white" />         <img src="https://img.shields.io/badge/JSON-F5DE19?style=flat-square&logo=json&logoColor=black" /></p>
-
 <h2 align='center'>Preview</h2>
 
 <p align='center'><img src="https://github.com/user-attachments/assets/6cb9157a-991d-419e-8cf9-e8fd5c520f0a" /></p>
 
-<h2 align='center'>Installation</h2>
-Since Brightness is still under development and not yet published as apackage, you can fork the repository  into your local machine and try or test.
+<h2 align='center'>ℹ️ About</h2>
+Brightness Editor is an advanced, user-friendly Markdown editor designed to streamline your writing and editing workflow. It combines powerful Markdown support with an intuitive interface, making it accessible for both beginners and experienced users.
+ 
+<h2 align='center'>⭐ Features</h2>
+
+- **Live preview**: See rendered Markdown as you type
+
+- **Syntax highlighting**: Color-coded Markdown syntax for readability
+  
+- **Split view**: Edit Markdown on one side, preview on the other
+
+- **Export options**: Export to HTML, PDF, etc.
+
+- **Themes**: Light and dark themes for the preview
+
+- **File management**: Open, save, and organize Markdown files
+
+- **Modes**: Focus, Distraction Free mode.
+
+- **Maths Support**: Equations and math expressions.
+
+- **Mermaid Support**: Render charts, graphs, and diagrams.
+
+- **Presentation Mode**: Present live markdown.
+
+<h2 align='center'>Installation - 🛠️ For Development or Contribution</h2>
+Since Brightness is still under development and not yet published as a package, you can fork the repository onto your local machine and try or test.
 <h3>Steps to run locally:</h3>
 
 1. **Fork** this repository by clicking the Fork button at the top right of this page
@@ -23,17 +44,27 @@ Since Brightness is still under development and not yet published as apackage, y
    ```bash
    cd BrightnessMD
    ```
-4. Install **Requirements**
+4. Install **Requirements**:
    
-   use `requirements.txt`
+   Use `requirements.txt`
    ```bash
    pip install -r requirements.txt
    ```
 
-5. **Run**
+5. **Run** the program:
    
    Run `Brightness_Editor.py`
+   ```bash
+   Brightness_Editor.py
+   ```
+<h2 align='center'>🛡️ Copyright and License</h2>
 
+© 2025 Rishikesh Mahajan
 
+This project is licensed under the **GNU General Public License v3.0**.
+
+You are free to use, modify, and distribute this software under the terms of the GPLv3 license. Any derivative works or redistributed versions must also be licensed under GPLv3.
+
+For more details, see the full [LICENSE](LICENSE) file or visit the [GNU GPL v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html) official page.
 
 
