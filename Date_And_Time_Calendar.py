@@ -1,9 +1,6 @@
-import sys, os, re
-import webbrowser
 from ShieldsLicense import *
 from Command_Line import CommandHandler
 from PySide6.QtPrintSupport import QPrintDialog, QPrinter, QPrintPreviewDialog
-import json
 from datetime import date
 from datetime import*
 from PySide6.QtWidgets import QTabBar
@@ -17,9 +14,7 @@ from PySide6 import QtCore
 from PySide6.QtGui import QFontMetrics, QTextCharFormat, QFont
 from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWebEngineCore import QWebEnginePage, QWebEngineProfile
-import markdown2
-from PySide6.QtGui import QContextMenuEvent
-import sqlite3
+from PySide6.QtGui import QContextMenuEven
 from markdown2 import Markdown
 from pygments import highlight
 from pygments.formatters import HtmlFormatter
