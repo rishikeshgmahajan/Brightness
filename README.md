@@ -3,9 +3,10 @@
 
 <h2 align='center'>Preview</h2>
 
-<p align='center'><img src="https://github.com/user-attachments/assets/6cb9157a-991d-419e-8cf9-e8fd5c520f0a" /></p>
+<p align='center'><img src="https://github.com/user-attachments/assets/31faba57-cffa-4130-8952-7fe2a2592c8c" /></p>
 
 <h2 align='center'>ℹ️ About</h2>
+
 Brightness Editor is an advanced, user-friendly Markdown editor designed to streamline your writing and editing workflow. It combines powerful Markdown support with an intuitive interface, making it accessible for both beginners and experienced users.
  
 <h2 align='center'>⭐ Features</h2>
@@ -58,7 +59,7 @@ Since Brightness is still under development and not yet published as a package, 
    Brightness_Editor.py
    ```
 
-## <p align='center'>Community</p>
+## <p align='center'>🤝 Community</p>
 
 - **Want to contribute?**
   
